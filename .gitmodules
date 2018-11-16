@@ -1,16 +1,23 @@
 [submodule "haskell-vim"]
   path=pack/plugins/start/haskell-vim
   url=git://github.com/neovimhaskell/haskell-vim
+
 [submodule "LanguageClient-neovim"]
   path=pack/plugins/start/LanguageClient-neovim
   url=git://github.com/autozimu/LanguageClient-neovim
+
 [submodule "nerdtree"]
   path=pack/plugins/start/nerdtree
   url=git://github.com/scrooloose/nerdtree
+  
 [submodule "vim-buftabline"]
   path=pack/plugins/start/vim-buftabline
   url=git://github.com/ap/vim-buftabline
+
 [submodule "vim-stylish-haskell"]
   path=pack/plugins/start/vim-stylish-haskell
   url=git://github.com/nbouscal/vim-stylish-haskell
 
+[submodule "pack/plugins/start/fzf"]
+	path = pack/plugins/start/fzf
+	url = https://github.com/junegunn/fzf

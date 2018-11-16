@@ -1,6 +1,12 @@
 syntax on
 filetype plugin indent on
 
+if has('win32') || has('win64')
+  let $VIMHOME = $VIM."/vimfiles"
+else
+  let $VIMHOME = $HOME."/.vim"
+endif
+
 set softtabstop=2
 set tabstop=2
 set expandtab
@@ -12,6 +18,7 @@ set signcolumn=yes
 set incsearch
 set ruler
 set showcmd
+set completeopt=longest,menuone
 
 highlight ColorColumn ctermbg=gray
 set colorcolumn=80
@@ -45,11 +52,6 @@ hi Warning term=underline cterm=underline ctermfg=Yellow gui=undercurl
 hi link ALEWarning Warning
 hi link ALEInfo SpellCap
 
-set completeopt=longest,menuone
-
 let g:buftabline_numbers = 0
 let g:buftabline_separator = 1
-
-" Add fzf to runtime path (not fzf.vim)
-set rtp+=~/opt/fzf
 
