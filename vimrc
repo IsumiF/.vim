@@ -21,7 +21,7 @@ set showcmd
 set completeopt=longest,menuone
 
 highlight ColorColumn ctermbg=gray
-set colorcolumn=80
+set colorcolumn=81
 set textwidth=80
 
 let g:netrw_banner = 0
