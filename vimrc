@@ -27,8 +27,8 @@ set textwidth=80
 let g:netrw_banner = 0
 let g:netrw_browse_split = 2
 
-autocmd vimenter * NERDTree
 let NERDTreeShowHidden = 1
+map <C-\> :NERDTreeToggle<CR>
 
 " Language Client
 
