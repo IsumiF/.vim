@@ -18,7 +18,7 @@ set signcolumn=yes
 set incsearch
 set ruler
 set showcmd
-set completeopt=longest,menuone
+set completeopt=menuone,preview,noinsert,noselect
 
 highlight ColorColumn ctermbg=gray
 set colorcolumn=81
