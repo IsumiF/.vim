@@ -32,6 +32,7 @@ map <C-\> :NERDTreeToggle<CR>
 
 " Language Client
 
+let g:LanguageClient_autoStart = 1
 let g:LanguageClient_serverCommands = {
   \ 'haskell': ['hie-wrapper'],
   \ }
@@ -54,4 +55,7 @@ hi link ALEInfo SpellCap
 
 let g:buftabline_numbers = 0
 let g:buftabline_separator = 1
+
+" disable automatic indentation of 'haskell-vim'
+let g:haskell_indent_disable = 1
 
