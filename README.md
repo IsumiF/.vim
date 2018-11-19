@@ -28,3 +28,7 @@ the [instructions](https://github.com/haskell/haskell-ide-engine).
 `stylish-haskell` need to be on PATH. You may install one with `stack install
 stylish-haskell`, or with `cabal-install`.
 
+### fonts
+
+Fonts placed at `font/` are expected by `gvimrc` to be installed on system.
+On Ubuntu 18.04, for example, simply clicking those ttf files to install them.
