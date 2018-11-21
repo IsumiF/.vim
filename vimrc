@@ -59,3 +59,4 @@ let g:buftabline_separator = 1
 " disable automatic indentation of 'haskell-vim'
 let g:haskell_indent_disable = 1
 
+set exrc secure
