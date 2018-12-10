@@ -21,3 +21,6 @@
 	path = pack/plugins/start/nerdtree-git-plugin
 	url = git@github.com:Xuyuanp/nerdtree-git-plugin.git
 	branch = master
+[submodule "pack/plugins/start/vim-bufkill"]
+	path = pack/plugins/start/vim-bufkill
+	url = git@github.com:qpkorr/vim-bufkill.git
