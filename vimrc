@@ -7,6 +7,16 @@ else
   let $VIMHOME = $HOME."/.vim"
 endif
 
+call plug#begin('~/.vim/plugged')
+
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() }}
+Plug 'neovimhaskell/haskell-vim'
+Plug 'alx741/vim-stylishask'
+Plug 'scrooloose/nerdtree'
+Plug 'qpkorr/vim-bufkill'
+
+call plug#end()
+
 set softtabstop=2
 set tabstop=2
 set expandtab
@@ -30,33 +40,11 @@ let g:netrw_browse_split = 2
 let NERDTreeShowHidden = 1
 map <C-\> :NERDTreeToggle<CR>
 
-" Language Client
-
-let g:LanguageClient_autoStart = 0
-let g:LanguageClient_serverCommands = {
-  \ 'haskell': ['hie-wrapper'],
-  \ }
-" cquery doesn't work well enough, so I disable them for now.
-"  'cpp': ['cquery'],
-"  'c': ['cquery']
-
-map <F1> :call LanguageClient#textDocument_hover()<CR>
-map <F2> :call LanguageClient#explainErrorAtPoint()<CR>
-map <F3> :call LanguageClient#textDocument_codeAction()<CR>
-map <F4> :call LanguageClient#textDocument_rename()<CR>
-map <F5> :call LanguageClient#textDocument_formatting()<CR>
-map <F6> :call LanguageClient#textDocument_definition()<CR>
-
-hi link ALEError Error
-hi Warning term=underline cterm=underline ctermfg=Yellow gui=undercurl
-  \ guisp=Gold
-hi link ALEWarning Warning
-hi link ALEInfo SpellCap
-
-let g:buftabline_numbers = 0
-let g:buftabline_separator = 1
-
 " disable automatic indentation of 'haskell-vim'
 let g:haskell_indent_disable = 1
+
+let g:stylishask_on_save = 1
+
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 set exrc secure
