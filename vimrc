@@ -14,6 +14,7 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'alx741/vim-stylishask'
 Plug 'scrooloose/nerdtree'
 Plug 'qpkorr/vim-bufkill'
+Plug 'ap/vim-buftabline'
 
 call plug#end()
 
@@ -45,6 +46,17 @@ let g:haskell_indent_disable = 1
 
 let g:stylishask_on_save = 1
 
+inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
 
 set exrc secure

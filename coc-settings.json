@@ -19,6 +19,13 @@
           "completionSnippetsOn": false
         }
       }
+    },
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "filetypes": ["go"]
     }
-  }
+  },
+  "suggest.noselect": false,
+  "suggest.timeout": 0
 }
