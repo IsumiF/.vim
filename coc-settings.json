@@ -16,7 +16,7 @@
         "languageServerHaskell": {
           "hlintOn": true,
           "maxNumberOfProblems": 100,
-          "completionSnippetsOn": false
+          "completionSnippetsOn": true
         }
       }
     },
